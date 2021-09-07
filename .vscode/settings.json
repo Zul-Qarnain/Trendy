@@ -2,5 +2,7 @@
     "css.validate": false,
     "editor.formatOnSave": true,
     "editor.tabSize": 2,
-    "prettier.tabWidth": 2
+    "prettier.tabWidth": 2,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 100
 }
