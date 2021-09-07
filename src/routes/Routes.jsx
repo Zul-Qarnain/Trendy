@@ -5,10 +5,8 @@ import Home from '@/pages/Home';
 
 export default function Routes() {
   return (
-    <Router>
-      <Switch>
-        <Route exact path='/' component={Home} />
-      </Switch>
-    </Router>
+    <Switch>
+      <Route exact path='/' component={Home} />
+    </Switch>
   );
 }
