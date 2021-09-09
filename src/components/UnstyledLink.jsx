@@ -16,6 +16,6 @@ export default function UnstyledLink(props) {
   //     rel='noopener noreferrer'
   //     {...props}
   // >hi</a>
-  <div>hi</div>
+  <div className="text-red-800">hi</div>
   );
 }

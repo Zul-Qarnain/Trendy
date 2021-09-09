@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ssr": "nodemon server",
-    "build": "yarn build:client && yarn build:server",
+    "build": "yarn build:client && yarn build:server && yarn buildcss",
+    "buildcss": "cross-env NODE_ENV=production tailwindcss-cli build -o styles/styles.css",
     "build:client": "vite build --outDir dist/client",
     "build:server": "vite build --ssr src/entry-server.jsx --outDir dist/server",
     "generate": "vite build --outDir dist/static && yarn build:server && node prerender",
@@ -13,22 +14,26 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@iconscout/react-unicons-thinline": "^0.0.1",
     "@tailwindcss/forms": "^0.3.2",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-helmet": "^6.1.0",
+    "react-lorem-ipsum": "^1.4.9",
     "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "react-unsplash-wrapper": "^1.1.5"
   },
   "devDependencies": {
     "@vitejs/plugin-react-refresh": "^1.3.1",
     "autoprefixer": "^10.2.5",
-    "postcss": "^8.2.13",
-    "tailwindcss": "^2.1.2",
-    "vite": "^2.2.3",
     "compression": "^1.7.4",
     "cross-env": "^7.0.3",
     "express": "^4.17.1",
-    "serve-static": "^1.14.1"
+    "postcss": "^8.2.13",
+    "serve-static": "^1.14.1",
+    "tailwindcss": "^2.1.2",
+    "tailwindcss-cli": "^0.1.2",
+    "vite": "^2.2.3"
   }
 }
